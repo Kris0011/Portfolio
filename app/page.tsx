@@ -1,54 +1,34 @@
-import NextLink from "next/link";
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
+
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { GithubIcon , TwitterIcon } from "@/components/icons";
+import WaterImage from "@/components/WaterImage";
+import { Button } from "@nextui-org/button";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
-	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
-			</div>
+  return (
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <div className="flex md:flex-row space-x-5 justify-center items-center flex-col-reverse">
+        <div className="inline-block max-w-lg text-center justify-center md:mr-24 mt-24 md:mt-4">
+          <h1 className={title()}>Hello , I am &nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>Kris Patel&nbsp;</h1>
+          <br />
+          <h2 className={subtitle({ class: "mt-4" })}>
+            A passionate developer based in Ahmedabad , India.
+          </h2>
+		  <div></div>
+          <Button className="mt-4 m-2">
+            <GithubIcon /> Kris0011
+          </Button>
+          <Button className="mt-4">
+            <TwitterIcon/> kris_patel
+          </Button>
+        </div>
 
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					as={NextLink}
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					as={NextLink}
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
+        <WaterImage />
+      </div>
 
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
-	);
+	  <TechStack/>
+    </section>
+  );
 }
