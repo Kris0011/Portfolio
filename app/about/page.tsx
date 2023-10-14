@@ -28,17 +28,17 @@ export default function App() {
       </CardHeader>
       <CardBody className="px-3 py-0 text-small text-default-400">
         <p className="pt-3 pl-2 pr-2">
-          Welcome to my coding journey! I'm Kris Patel, a passionate fullstack developer with a deep love for UI/UX design. My mission is to craft remarkable digital experiences that not only function flawlessly but also delight the user's senses.
+          Welcome to my coding journey {'!'} I&apos;m Kris Patel, a passionate fullstack developer with a deep love for UI/UX design. My mission is to craft remarkable digital experiences that not only function flawlessly but also delight the user&apos;s senses.
         </p>
 		<br/>
         <p className="pt-2 pl-2 pr-2">
-          Join me on this journey, and let's embark on the wonderful world of #CodeWithKris! Together, we'll explore the ever-evolving landscape of web development, share insights, and create beautiful, functional, and user-friendly digital experiences. Feel free to connect, collaborate, or simply chat about our shared love for all things tech.
+          Join me on this journey, and let&apos;s embark on the wonderful world of {'#'}CodeWithKris{'!'} Together, we&apos;ll explore the ever-evolving landscape of web development, share insights, and create beautiful, functional, and user-friendly digital experiences. Feel free to connect, collaborate, or simply chat about our shared love for all things tech.
         </p>
 		<br/>
-        <p className="pt-2 pl-2 pr-2">Let's code, design, and innovate our way to a more connected and visually appealing digital universe. 🚀💻✨</p>
+        <p className="pt-2 pl-2 pr-2">Let&apos;s code, design, and innovate our way to a more connected and visually appealing digital universe. 🚀💻✨</p>
 		<br/>
         <span className="pt-2 pl-2 pr-2">
-          #CodeWithKris 
+          {'#'}CodeWithKris 
           <span className="py-2" aria-label="computer" role="img">
             💻
           </span>

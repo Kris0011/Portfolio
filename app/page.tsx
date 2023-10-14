@@ -1,6 +1,5 @@
-
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon , TwitterIcon } from "@/components/icons";
+import { GithubIcon, TwitterIcon } from "@/components/icons";
 import WaterImage from "@/components/WaterImage";
 import { Button } from "@nextui-org/button";
 import TechStack from "@/components/TechStack";
@@ -16,19 +15,19 @@ export default function Home() {
           <h2 className={subtitle({ class: "mt-4" })}>
             A passionate developer based in Ahmedabad , India.
           </h2>
-		  <div></div>
+          <div></div>
           <Button className="mt-4 m-2">
             <GithubIcon /> Kris0011
           </Button>
           <Button className="mt-4">
-            <TwitterIcon/> kris__patel
+            <TwitterIcon /> kris__patel
           </Button>
         </div>
 
         <WaterImage />
       </div>
 
-	  <TechStack/>
+      <TechStack />
     </section>
   );
 }
