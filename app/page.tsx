@@ -10,8 +10,8 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="flex md:flex-row space-x-5 justify-center items-center flex-col-reverse">
         <div className="inline-block max-w-lg text-center justify-center md:mr-24 mt-24 md:mt-4">
-          <h1 className={title()}>Hello , I am &nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>Kris Patel&nbsp;</h1>
+          <h1 className={title()}>Hello , I am </h1>
+          <h1 className={title({ color: "violet" })}>Kris Patel</h1>
           <br />
           <h2 className={subtitle({ class: "mt-4" })}>
             A passionate developer based in Ahmedabad , India.
@@ -21,7 +21,7 @@ export default function Home() {
             <GithubIcon /> Kris0011
           </Button>
           <Button className="mt-4">
-            <TwitterIcon/> kris_patel
+            <TwitterIcon/> kris__patel
           </Button>
         </div>
 
