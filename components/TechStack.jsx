@@ -18,10 +18,10 @@ import { title , subtitle} from "@/components/primitives";
 
 export default function TechStack() {
   return (
-    <div className="mt-10">
-     
-      <Divider className="my-4" />
+    <div className="mt-16">
+      {/* <Divider className="mb-6" /> */}
       <div className="flex h-5 items-center space-x-4 text-small mt-5">
+        <Divider orientation="vertical" className='h-10' />
         <h1 className={subtitle()}>Tech Stack</h1>
         <Divider orientation="vertical" className='h-10' />
  
@@ -38,6 +38,8 @@ export default function TechStack() {
 
         <Divider orientation="vertical" className='h-10'/>
         <Image src={tailwind}  alt="NextJS" className='w-12 ' />
+        <Divider orientation="vertical" className='h-10' />
+
       </div>
     </div>
   )

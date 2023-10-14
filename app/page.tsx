@@ -28,6 +28,8 @@ export default function Home() {
       </div>
 
       <TechStack />
+
+   
     </section>
   );
 }
