@@ -9,13 +9,15 @@ export default function PricingPage() {
   const [email , setEmail] = useState('');
   const [subject , setSubject] = useState('');
   const [message , setMessage] = useState('');
+  const [loader , setLoader] = useState(false);
 
   const postContactData = async () => {
     const data = {name,email,subject,message};
     console.log(data);
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', data);
-      console.log('Data has been successfully saved.', response.data);
+      setLoader(true);
+      await axios.post('http://localhost:5000/api/contact', data);
+      setLoader(false);
     } catch (error) {
       console.error('Error saving data.', error);
     }
@@ -40,6 +42,7 @@ export default function PricingPage() {
           />
 
           <Button
+            isLoading = {loader}
             radius="full"
             className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
             onClick={postContactData}
