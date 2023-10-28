@@ -10,7 +10,7 @@ import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
-  const resumeURL = "https://drive.google.com/file/d/1cFPOqgtDMIgT6vzSW1SVoyRXaLyg4G1R/view?usp=sharing"
+  const resumeURL = "https://drive.google.com/file/d/16XdQbigPAL5ceoECMqS6wHSaER_LfvXW/view"
   return (
     <section className="flex flex-col items-center justify-center gap-4">
       <div className="flex md:flex-row space-x-5 justify-center items-center flex-col-reverse">
