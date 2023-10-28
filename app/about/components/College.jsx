@@ -17,7 +17,7 @@ export default function College() {
                     <h2 className='text-yellow-500 text-3xl font-bold'>
                         2022-2026</h2>
                     <h2 className='font-semibold text-2xl'>
-                        Bachelor's Degree of Technolgy
+                        Bachelor&apos;s Degree of Technolgy
                     </h2>
                     <h2 className='font-semibold text-xl mb-4'>
                         DHARMSINH DESAI UNIVERSITY
