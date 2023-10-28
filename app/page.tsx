@@ -10,6 +10,7 @@ import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
+  const resumeURL = "https://drive.google.com/file/d/1cFPOqgtDMIgT6vzSW1SVoyRXaLyg4G1R/view?usp=sharing"
   return (
     <section className="flex flex-col items-center justify-center gap-4">
       <div className="flex md:flex-row space-x-5 justify-center items-center flex-col-reverse">
@@ -25,12 +26,12 @@ export default function Home() {
           <h2 className={subtitle({ class: "mt-4" })}>
             A passionate developer based in Ahmedabad , India.
           </h2>
-          {/* <div></div> */}
+          <div>
           <Button className="mt-4 m-2">
           <Link
               isExternal
               href={siteConfig.links.github}
-              aria-label="Twitter"
+              aria-label="Github"
               className="text-white"
             >
               <GithubIcon /> Kris0011
@@ -48,6 +49,20 @@ export default function Home() {
               <TwitterIcon /> kris__patel
             </Link>
           </Button>
+          </div>
+          <div>
+          <Button className="mt-1">
+            <Link
+              isExternal
+              href={resumeURL}
+              aria-label="resume"
+              className="text-white"
+            >
+              Resume
+            </Link>
+          </Button>
+          </div>
+          
         </motion.div>
 
         <motion.div
@@ -65,6 +80,7 @@ export default function Home() {
       >
         <TechStack />
       </motion.div>
+
     </section>
   );
 }
