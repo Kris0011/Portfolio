@@ -16,7 +16,7 @@ export default function PricingPage() {
     console.log(data);
     try {
       setLoader(true);
-      await axios.post('http://localhost:5000/api/contact', data);
+      await axios.post('https://backend-portfoli.onrender.com/api/contact', data);
       setLoader(false);
     } catch (error) {
       console.error('Error saving data.', error);
