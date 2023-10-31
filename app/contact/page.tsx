@@ -10,6 +10,7 @@ export default function PricingPage() {
   const [subject , setSubject] = useState('');
   const [message , setMessage] = useState('');
   const [loader , setLoader] = useState(false);
+  const [notification, setNotification] = useState(false);
 
   const postContactData = async () => {
     const data = {name,email,subject,message};
@@ -18,6 +19,10 @@ export default function PricingPage() {
       setLoader(true);
       await axios.post('https://backend-portfoli.onrender.com/api/contact', data);
       setLoader(false);
+      setNotification(true);
+      setTimeout(() => {
+        setNotification(false);
+      }, 5000);
     } catch (error) {
       console.error('Error saving data.', error);
     }
@@ -26,6 +31,7 @@ export default function PricingPage() {
   return (
     <div>
       <h1 className={title()}>Contact Me</h1>
+      {notification && <div className="text-green-500 mb-4">Notification sent to Kris Patel. Thank you for connecting.</div>}
       <div className="mt-10 space-x-2">
         <div className="space-y-2 mt-1 ">
           <Input size="md" type="text" label="Name" variant="underlined" value={name} onChange={(e)=> setName(e.target.value)}/>
