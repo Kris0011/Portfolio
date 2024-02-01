@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply max-w-4xl mx-auto px-6;
+  }
+}
+
+@layer {
+  body {
+    @apply dark:bg-[#18181b] bg-gray-50 text-gray-900;
+  }
+}
+
+@layer utilities {
+.custom-line-through {
+    text-decoration: line-through;
+    text-decoration-color: red; /* Customize the color */
+    text-decoration-style: wavy; /* Customize the style (e.g., wavy) */
+  }
+}
