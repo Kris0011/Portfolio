@@ -60,9 +60,7 @@ export default async function BlogPost({ params, data }: any) {
             width={1200}
             height={400}
           />
-        ) : (
-          <p>Error</p>
-        )}
+        ) : null}
         <div className="space-x-4">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <div className="flex items-center space-x-2 text-black dark:text-white opacity-60">
