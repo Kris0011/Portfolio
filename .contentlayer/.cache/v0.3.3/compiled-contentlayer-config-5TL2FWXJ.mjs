@@ -61,7 +61,8 @@ var contentlayer_config_default = makeSource({
         rehypePrettyCode,
         {
           theme: {
-            dark: "github-dark"
+            dark: "github-dark",
+            light: "github-dark"
           }
         }
       ],
@@ -79,4 +80,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-DHU3LXRM.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-5TL2FWXJ.mjs.map

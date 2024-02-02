@@ -64,6 +64,7 @@ export default makeSource({
         {
           theme: {
             dark: "github-dark",
+            light: "github-dark",
           },
         },
       ],
