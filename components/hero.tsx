@@ -112,7 +112,9 @@ const Hero = () => {
           </h3>
           <div className="grid gap-4 md:grid-cols-2">
             {projects.map((project, index) => (
-              <ProjectsCard key={index} project={project} />
+              <Reveal>
+                <ProjectsCard key={index} project={project} />
+              </Reveal>
             ))}
           </div>
         </div>
