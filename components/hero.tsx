@@ -37,7 +37,7 @@ type Project = {
 const Hero = () => {
   return (
     <section id="home">
-      <Reveal>
+    {/* <Reveal> */}
         <div>
           <div className="w-full  flex justify-center flex-col-reverse lg:flex-row items-center">
             <Image
@@ -55,39 +55,40 @@ const Hero = () => {
             </h1>
           </div>
         </div>
-      </Reveal>
+     {/* </Reveal> */}
       <div id="about" className="mt-10">
-        <Reveal>
+    {/* <Reveal> */}
           <span className="text-black dark:text-white my-5">
             Hi, I&rsquo;m Kris
             <span className="line-through text-red-500">h</span> Patel
           </span>
-        </Reveal>
+     
+     {/* </Reveal> */}
         <div className="text-black dark:text-white text-base">
-          <Reveal>
+    {/* <Reveal> */}
             <p>
               19-year-old from Ahmedabad, engineering student by day, accidental
               bug whisperer by night. Chaai is my secret sauce for coding – if
               only it could debug too! Let&rsquo;s be real, coding without
               laughs is like debugging in the dark ages.
             </p>
-          </Reveal>
+     {/* </Reveal> */}
           <hr className="my-5 opacity-30" />
           <div className="flex flex-col gap-3">
-            <Reveal>
+    {/* <Reveal> */}
               <p>
                 Passionate about creating smooth software solutions. I play with
                 code, dance with databases, and add a touch of magic.
               </p>
-            </Reveal>
-            <Reveal>
+     {/* </Reveal> */}
+    {/* <Reveal> */}
               <p>
                 Beyond coding, I find joy in singing, strumming my guitar, and
                 dominating FPS games.
               </p>
-            </Reveal>
+     {/* </Reveal> */}
           </div>
-          <Reveal>
+    {/* <Reveal> */}
             <div className="my-4">
               <div className="grid gap-2 grid-cols-2 md:grid-cols-4 ">
                 <CustomLink
@@ -102,7 +103,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-          </Reveal>
+     {/* </Reveal> */}
         </div>
       </div>
       <section id="projects">
@@ -112,9 +113,9 @@ const Hero = () => {
           </h3>
           <div className="grid gap-4 md:grid-cols-2">
             {projects.map((project, index) => (
-              <Reveal key={index}>
+          //    <Reveal key={index}>
                 <ProjectsCard key={index} project={project} />
-              </Reveal>
+          //    </Reveal>
             ))}
           </div>
         </div>
