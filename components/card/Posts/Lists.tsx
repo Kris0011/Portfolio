@@ -23,7 +23,7 @@ const Lists = () => {
   const posts: Post[] = getData();
 
   return (
-    <div>
+    <div className="font-quicksand">
       {posts.map((post: Post) => (
         <PostCard key={post._id} data={post} />
       ))}

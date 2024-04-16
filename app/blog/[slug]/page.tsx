@@ -50,7 +50,7 @@ export default async function BlogPost({ params, data }: any) {
   }
 
   return (
-    <section className="">
+    <section className=" font-quicksand">
       <header className="space-y-8 text-center">
         {post.bannerUrl ? (
           <Image

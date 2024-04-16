@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins : ['Poppins', 'sans-serif'],
+        quicksand : ['Quicksand', 'sans-serif'],
+      },
       colors: {
         dark_card: "#1c1c1e",
         light_card: "#f2f2f7",

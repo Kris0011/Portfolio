@@ -21,7 +21,7 @@ const PostCard = ({ data }: PostCardProps) => {
     <section>
       <div className="flex flex-col rounded-lg py-4 no-underline text-neutral-800 dark:text-neutral-200 transition-all">
         <article>
-          <NextLink href={`/post/${data.slug}`}>
+          <NextLink href={`/blog/${data.slug}`}>
             <h4 className="text-xl font-semibold">{data.title}</h4>
           </NextLink>
           <p className="text-sm mt-1 opacity-70 dark:opacity-60">{data.subtitle}</p>

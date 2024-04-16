@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: "#d5d5d7",
+  themeColor: "#1c1c1c",
   icons: {
     icon: "/krispatel.jpeg",
     apple: "/krispatel.jpeg",

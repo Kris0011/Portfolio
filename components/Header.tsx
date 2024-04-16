@@ -6,15 +6,16 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./theme-toggle";
 
 const links = {
-  "/": "About",
-  "/post": "Blog",
-  };
+  "/": "Home",
+  "/about": "About",
+  "/blog": "Blog",
+};
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex flex-col sm:flex-row mt-5 md:mb-10 items-center">
+    <header className="flex flex-col sm:flex-row mt-5 md:mb-10 items-center font-poppins">
       <nav
         id="nav"
         className={
