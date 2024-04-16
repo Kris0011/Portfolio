@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="flex flex-col gap-3">
             <p>
               I craft software solutions with precision, enjoy solving puzzles,
-              and when I'm not coding, you'll find me singing, strumming my
+              and when I&aposm not coding, you&aposll find me singing, strumming my
               guitar, or exploring the latest tech trends.
             </p>
             <p>

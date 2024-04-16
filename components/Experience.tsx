@@ -31,7 +31,7 @@ export default function Experience() {
 
        { experience.map((exp, index) => (
          
-         <div className="timeline__item">
+         <div className="timeline__item" key={index}>
           <div className="timeline__item-header">
             <button
               className="timeline__arrow"
