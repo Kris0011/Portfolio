@@ -6,6 +6,7 @@ import "./globals.css";
 import "@upstash/claps/style.css";
 
 import Header from "@/components/Header";
+import ThemeProvider from "@/components/providers/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,15 +60,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head >
-        <body className={inter.className} >
-          <main className="md:px-10">
-            <Header />
-            {children}
-          </main>
-          <Analytics />
-        </body>
-      </head>
+      <ThemeProvider attribute="class" defaultTheme="dark">
+        <head>
+          <body className={inter.className}>
+            <main className="md:px-10">
+              <Header />
+              {children}
+            </main>
+            <Analytics />
+          </body>
+        </head>
+      </ThemeProvider>
     </html>
   );
 }

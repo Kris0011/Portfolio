@@ -9,19 +9,37 @@ import Reveal from "./Reveal";
 
 const projects: Project[] = [
   {
-    title: "KisaanSathi",
+    title: "ParkEZ",
     description:
-      "Websocket based auction system for farmers and traders. Built at DotSlash 7.0 hackathon.",
-    href: "https://github.com/Kris0011/KisaanSathi",
+      "A platform for locating, reserving, and adding local parking spots, featuring real-time parking availability updates. Built with React, Express.js, Node.js, Firebase, MapBox, and MongoDB.",
+    href: "https://github.com/Kris0011/ParkEZ",
   },
   {
-    title: "Connect - Fresh Start Guide",
+    title: "CricketAdda",
+    description:
+      "A platform for managing cricket tournaments, including tournament creation, match tracking, and team management. Built with Spring Boot, React.js, and MySQL.",
+    href: "https://github.com/Kris0011/CricketAdda",
+  },
+  {
+    title: "AgroZenith (Built at Hackout 2024 hackathon)",
+    description:
+      "An online auction platform for farmers to list and sell produce, with crop-specific fertilizer recommendations and a real-time fire alert system. Built with React, Flask, Python, Express.js, Node.js, and MongoDB.",
+    href: "https://github.com/Kris0011/Hackout2024",
+  },
+  {
+    title: "GyaanGanga (Built at AceHack 3.0)",
+    description:
+      "A platform that provides real-time lecture streaming with automatic captions, transforming captions into organized notes to enhance learning.",
+    href: "https://devfolio.co/projects/gyaanganga-6157",
+  },
+  {
+    title: "Connect - Fresh Start Guide (Built at TicTechToe'23)",
     description:
       "Fostering student connections and collaborative learning. Built at TicTechToe'23 hackathon.",
     href: "https://github.com/Kris0011/Portfolio",
   },
   {
-    title: "qUIck-react",
+    title: "qUIck-react (Part of Hacktoberfest 2023)",
     description:
       "An open source UI library for React. Part of Hacktoberfest 2023.",
     href: "https://github.com/developer-student-clubs/qUIck-react",
@@ -67,15 +85,17 @@ const Hero = () => {
         <div className="text-black dark:text-white text-base ">
           {/* <Reveal> */}
           <p>
-            A 19-y/o computer engineering student from Ahmedabad, India . I love diving into the world of coding and finding creative solutions to challenges.
+            A 19-y/o computer engineering student from Ahmedabad, India . I love
+            diving into the world of coding and finding creative solutions to
+            challenges.
           </p>
           {/* </Reveal> */}
           <hr className="my-5 opacity-30" />
           <div className="flex flex-col gap-3">
             <p>
               I craft software solutions with precision, enjoy solving puzzles,
-              and when I&aposm not coding, you&aposll find me singing, strumming my
-              guitar, or exploring the latest tech trends.
+              and when I&rsquo;m not coding, you&rsquo;ll find me singing,
+              strumming my guitar, or exploring the latest tech trends.
             </p>
             <p>
               Outside of coding, I enjoy connecting with people and spreading
@@ -91,10 +111,10 @@ const Hero = () => {
           <div className="my-4">
             <div className="grid gap-2 grid-cols-2 md:grid-cols-4 ">
               <CustomLink
-               text="Resume"
-               url="https://drive.google.com/file/d/1xJSGaesb__qMyJ97_ouiL-8PTKOG-Yr-/view?usp=sharing"
-               iconKey="resume"
-             />
+                text="Resume"
+                url="https://drive.google.com/file/d/1xJSGaesb__qMyJ97_ouiL-8PTKOG-Yr-/view?usp=sharing"
+                iconKey="resume"
+              />
               <CustomLink
                 text="Twitter"
                 url="https://twitter.com/kris__patel"
@@ -105,7 +125,6 @@ const Hero = () => {
                 url="https://github.com/Kris0011"
                 iconKey="github"
               />
-              
             </div>
           </div>
           {/* </Reveal> */}

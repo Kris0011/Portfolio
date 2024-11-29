@@ -2,6 +2,5 @@
 
 import duhacksMdx from './duhacks.mdx.json' assert { type: 'json' }
 import hackathonMdx from './hackathon.mdx.json' assert { type: 'json' }
-import lifelessonsMdx from './lifelessons.mdx.json' assert { type: 'json' }
 
-export const allPosts = [duhacksMdx, hackathonMdx, lifelessonsMdx]
+export const allPosts = [duhacksMdx, hackathonMdx]
