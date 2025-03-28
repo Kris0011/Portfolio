@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="font-quicksand text-white">
+    <div className="font-quicksandd text-black dark:text-white">
       <div>
-        <h1 className="text-white text-2xl font-semibold  underline">
+        <h1 className="text-black dark:text-white text-2xl font-semibold  underline">
           <b>Education</b>
         </h1>
         {/* <h2 className="text-xl font-semibold">
@@ -22,18 +22,18 @@ const AboutPage = () => {
         <p>
             B.Tech Computer Engineering  ( Current CPI : 8.76/10 )
         </p> */}
-        <Education/>
+        <Education />
       </div>
 
 
       <div>
-        <h1 className="text-black dark:text-white text-2xl font-semibold underline">
+        <h1 className="text-black dark:text-black dark:text-white text-2xl font-semibold underline">
           <b>Experience</b>
         </h1>
 
-        <Experience/>
+        <Experience />
 
-       
+
       </div>
 
 

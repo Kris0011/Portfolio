@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const BlogPage = () => {
   return (
     <header>
-      <h1 className="text-black dark:text-white text-2xl font-semibold font-quicksand">
+      <h1 className="text-black dark:text-black dark:text-white text-2xl font-semibold font-quicksandd">
         <b>Some of my blogs</b>
       </h1>
       <div className="mt-4">

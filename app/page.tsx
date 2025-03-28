@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: any) {
 
 export default async function HomePage() {
   return (
-    <div className="font-quicksand">
+    <div className="">
       <Hero />
     </div>
   );

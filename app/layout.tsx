@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
@@ -9,10 +9,11 @@ import Header from "@/components/Header";
 import ThemeProvider from "@/components/providers/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
+const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 const title = "Kris Patel";
-const description = "Student and developer";
-const url = "https://krispatel.live";
+const description = "A Human Being who loves to enjoy life.";
+const url = "https://krispatel.me";
 const locale = "tr-TR";
 
 export const metadata: Metadata = {
@@ -60,9 +61,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider attribute="class" defaultTheme="dark">
+      <ThemeProvider attribute="class" defaultTheme="light">
         <head>
-          <body className={inter.className}>
+          <body className={robotoMono.className}>
             <main className="md:px-10">
               <Header />
               {children}

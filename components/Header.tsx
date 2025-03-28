@@ -20,11 +20,10 @@ const Header = () => {
           return (
             <Link key={path} href={path}>
               <span
-                className={`${
-                  active
-                    ? "text-black dark:text-white font-semibold"
-                    : "dark:text-white text-black opacity-60"
-                }`}
+                className={`${active
+                    ? "text-black dark:text-black dark:text-white font-semibold"
+                    : "dark:text-black dark:text-white text-black opacity-60"
+                  }`}
               >
                 {text}
               </span>
