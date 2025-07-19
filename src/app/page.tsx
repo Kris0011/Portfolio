@@ -20,18 +20,18 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none mt-1"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-xl mt-3"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-36 border">
+              <Avatar className="size-44 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
@@ -44,7 +44,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm  dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -205,7 +205,8 @@ export default function Page() {
               Blogs
             </div>
             <p className="text-muted-foreground max-w-md text-center">
-              I share my experiences, learnings, and thoughts here. Check out my latest posts!
+              I share my experiences, learnings, and thoughts here. Check out my
+              latest posts!
             </p>
             <Link
               href="/blog"
