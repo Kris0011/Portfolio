@@ -25,7 +25,7 @@ export function HackathonCard({
 }: Props) {
   return (
     <li className="relative ml-10 py-4">
-      <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
+      <div className="absolute -left-16 top-2 flex items-center justify-center bg-card rounded-full ring-1 ring-border">
         <Avatar className="border size-12 m-auto">
           <AvatarImage src={image} alt={title} className="object-contain" />
           <AvatarFallback>{title[0]}</AvatarFallback>
@@ -49,7 +49,12 @@ export function HackathonCard({
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2">
+              <Badge
+                key={idx}
+                title={link.title}
+                className="flex gap-2"
+                variant="outline"
+              >
                 {link.icon}
                 {link.title}
               </Badge>

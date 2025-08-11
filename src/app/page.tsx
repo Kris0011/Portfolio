@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -208,12 +209,9 @@ export default function Page() {
               I share my experiences, learnings, and thoughts here. Check out my
               latest posts!
             </p>
-            <Link
-              href="/blog"
-              className="mt-2 inline-flex items-center rounded-md bg-blue-600 px-5 py-2 text-white font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Explore Blogs
-            </Link>
+            <Button asChild className="mt-2" variant="outline">
+              <Link href="/blog">Explore Blogs</Link>
+            </Button>
           </div>
         </BlurFade>
       </section>

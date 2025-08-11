@@ -15,20 +15,27 @@ export const DATA = {
 
   avatarUrl: "/kris2.jpg",
   skills: [
-    "React",
+    "Java",
     "Spring Boot",
-    "Next.js",
     "Typescript",
+    "JavaScript",
+    "React",
+    "Next.js",
     "Node.js",
     "Python",
+    "Flask",
+    ".NET",
     "Docker",
     "Kubernetes",
-    "Java",
-    "C++",
-    "DevOps",
+    "Jenkins",
     "Kafka",
-    "Flask",
     "TensorFlow",
+    "Keras",
+    "PyTorch",
+    "AWS",
+    "Git",
+    "SQL",
+    "Redis",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -79,7 +86,7 @@ export const DATA = {
 
   work: [
     {
-      company: "IGNOSIS",
+      company: "Ignosis",
       href: "https://ignosis.ai",
       badges: [],
       location: "Ahmedabad, India",
@@ -88,7 +95,7 @@ export const DATA = {
       start: "June 2025",
       end: "Present",
       description:
-        "Working on scalable backend systems and microservices for AI-driven financial applications, focusing on automation and security.",
+        "Worked with Account Aggregator(AA)-powered fintech modules for the BFSI sector, enabling analytics, onboarding, and income verification workflows",
     },
     {
       company: "Google Developer Student Clubs - DDU",

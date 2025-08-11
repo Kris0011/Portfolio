@@ -43,12 +43,12 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "group flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
       <Link
         href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        className={cn("block cursor-pointer overflow-hidden", className)}
       >
         {video && (
           <video
@@ -57,7 +57,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         )}
         {image && (
@@ -66,7 +66,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-40 w-full overflow-hidden object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         )}
       </Link>
@@ -88,7 +88,7 @@ export function ProjectCard({
             {tags?.map((tag) => (
               <Badge
                 className="px-1 py-0 text-[10px]"
-                variant="secondary"
+                variant="outline"
                 key={tag}
               >
                 {tag}
@@ -102,7 +102,11 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge
+                  key={idx}
+                  className="flex gap-2 px-2 py-1 text-[10px]"
+                  variant="outline"
+                >
                   {link.icon}
                   {link.type}
                 </Badge>
