@@ -17,22 +17,22 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between sm:items-start">
+            <div className="flex flex-col space-y-1.5 text-center sm:text-left">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none mt-1"
+                className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl xl:text-5xl/none mt-1"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl mt-3"
+                className="max-w-[600px] text-sm sm:text-base md:text-xl mt-3"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-44 border">
+              <Avatar className="size-32 border sm:size-44">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>

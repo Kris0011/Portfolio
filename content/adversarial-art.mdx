@@ -1,0 +1,222 @@
+---
+publishedAt: "2025-07-10"
+title: "Adversarial Art – When AI Sees Cats as Guacamoles"
+summary: "Exploring the strange and fascinating world of adversarial examples where AI and human vision collide, from security implications to artistic expression."
+---
+
+![Adversarial Cat](/adversarial-cat.png "Adversarial Cat")
+
+## What If AI Saw the World Wrong?
+
+This is a cat.  
+My eyes say so. Your eyes say so.  
+But my AI? It's 99.7% sure it's a Guacamole.
+
+Adversarial Art is the bizarre intersection of AI security, creativity, and a little bit of digital mischief. It's about creating images that look perfectly normal to humans but utterly confuse machine learning models.
+
+---
+
+## The Magic Behind the Trick
+
+AI models, especially deep learning ones, aren't actually "seeing" like us.  
+They're detecting statistical patterns buried in pixel data — patterns we don't consciously notice.
+
+By making tiny, precise changes to the pixels in an image (changes invisible to the naked eye), we can push an AI model over its decision boundary. The result?
+
+- **Human:** "Still a cat."
+- **AI:** "Obviously a Guacamole."
+
+### How It Works
+
+The process involves calculating gradients — mathematical directions that tell us how to change each pixel to maximize the model's confusion. Think of it as finding the exact pressure points in an AI's "brain" and gently pushing them.
+
+```python
+# Simplified adversarial attack process
+def create_adversarial_example(image, model, target_class, epsilon=0.01):
+    # 1. Calculate gradients
+    image.requires_grad = True
+    output = model(image)
+    loss = criterion(output, target_class)
+    loss.backward()
+
+    # 2. Create perturbation
+    perturbation = epsilon * image.grad.sign()
+
+    # 3. Apply perturbation
+    adversarial_image = torch.clamp(image + perturbation, 0, 1)
+
+    return adversarial_image
+```
+
+---
+
+![Adversarial Cat](/cat-2.jpg "Adversarial Cat")
+
+---
+
+## Real-World Examples
+
+### 1. The Stop Sign That Wasn't
+
+In 2018, researchers demonstrated that adding small stickers to a stop sign could make AI systems classify it as a speed limit sign. This raised serious concerns about autonomous vehicle safety.
+
+### 2. The Turtle That Became a Rifle
+
+A 3D-printed turtle, when viewed from certain angles, was consistently misclassified as a rifle by computer vision systems. This showed that adversarial attacks aren't limited to 2D images.
+
+### 3. The Face That Fooled Face Recognition
+
+Researchers created special glasses that could make facial recognition systems misidentify people. The glasses contained patterns invisible to humans but disruptive to AI.
+
+---
+
+## Turning Attacks Into Art
+
+While adversarial examples started as a research curiosity, they've taken on an artistic life of their own:
+
+### Fashion & Wearables
+
+- **Adversarial T-shirts:** Printed with patterns that fool surveillance cameras
+- **Privacy Glasses:** Eyewear that prevents facial recognition
+- **Stealth Hoodies:** Clothing that makes wearers "invisible" to AI systems
+
+### Digital Art & Photography
+
+- **Hidden Messages:** Portraits containing patterns that AI misclassifies
+- **AI Confusion Art:** Images designed to trigger specific AI responses
+- **Neural Network Performance Art:** Real-time installations where AI always guesses wrong
+
+### Interactive Installations
+
+- **The Adversarial Zoo:** Museums displaying objects that consistently fool AI
+- **AI vs Human Perception:** Exhibits highlighting the differences between human and machine vision
+- **Privacy Protests:** Art pieces that challenge surveillance technology
+
+---
+
+## The Security Implications
+
+### Why This Matters
+
+Adversarial examples aren't just academic curiosities — they represent real security vulnerabilities:
+
+1. **Autonomous Vehicles:** Stop signs could be manipulated to cause accidents
+2. **Medical AI:** X-rays could be altered to hide tumors or create false positives
+3. **Surveillance Systems:** People could evade detection or be falsely identified
+4. **Content Moderation:** Harmful content could bypass AI filters
+
+### Defending Against Attacks
+
+Researchers are developing several defense strategies:
+
+```python
+# Example: Adversarial Training
+def adversarial_training(model, dataloader, epsilon=0.01):
+    for batch in dataloader:
+        # Create adversarial examples
+        adv_batch = create_adversarial_examples(batch, model, epsilon)
+
+        # Train on both clean and adversarial data
+        clean_loss = criterion(model(batch), labels)
+        adv_loss = criterion(model(adv_batch), labels)
+
+        total_loss = clean_loss + adv_loss
+        total_loss.backward()
+```
+
+---
+
+## Make Your Own Adversarial Image
+
+For the curious, here's a complete implementation to try this yourself:
+
+```python
+import torch
+import torchvision.models as models
+import torchvision.transforms as T
+from PIL import Image
+import numpy as np
+
+class AdversarialGenerator:
+    def __init__(self):
+        self.model = models.resnet50(pretrained=True).eval()
+        self.transform = T.Compose([
+            T.Resize(256),
+            T.CenterCrop(224),
+            T.ToTensor(),
+            T.Normalize(mean=[0.485, 0.456, 0.406],
+                       std=[0.229, 0.224, 0.225])
+        ])
+
+    def create_adversarial(self, image_path, target_class, epsilon=0.01, steps=10):
+        # Load and preprocess image
+        img = Image.open(image_path).convert('RGB')
+        x = self.transform(img).unsqueeze(0)
+
+        # Get original prediction
+        with torch.no_grad():
+            pred = self.model(x).argmax(dim=1)
+            print(f"Original prediction: {pred.item()}")
+
+        # Create adversarial example
+        x_adv = x.clone()
+        for _ in range(steps):
+            x_adv.requires_grad = True
+
+            # Forward pass
+            output = self.model(x_adv)
+            loss = torch.nn.CrossEntropyLoss()(output, torch.tensor([target_class]))
+
+            # Backward pass
+            loss.backward()
+
+            # Create perturbation
+            perturbation = epsilon * x_adv.grad.sign()
+            x_adv = torch.clamp(x_adv + perturbation, 0, 1).detach()
+
+        # Check result
+        with torch.no_grad():
+            pred_adv = self.model(x_adv).argmax(dim=1)
+            print(f"Adversarial prediction: {pred_adv.item()}")
+
+        return x_adv
+
+# Usage
+generator = AdversarialGenerator()
+adversarial_image = generator.create_adversarial("cat.jpg", target_class=859)  # Guacamole class
+```
+
+---
+
+## The Future of Adversarial Art
+
+### Emerging Trends
+
+1. **Generative Adversarial Networks (GANs):** Creating images that are inherently adversarial
+2. **3D Adversarial Objects:** Physical objects that fool AI from any angle
+3. **Audio Adversarial Examples:** Voice commands that humans can't hear but AI responds to
+4. **Text Adversarial Examples:** Written content that bypasses AI filters
+
+### The Bigger Picture
+
+Adversarial art isn't just about fooling AI — it's about understanding the fundamental differences between human and machine perception. It forces us to question:
+
+- What does it mean to "see"?
+- How do we define intelligence?
+- Where are the boundaries between human and artificial cognition?
+
+---
+
+## Conclusion
+
+Adversarial art sits at the fascinating intersection of technology, creativity, and philosophy. It's both a security concern and an artistic medium, a technical challenge and a philosophical exploration.
+
+As AI becomes more integrated into our daily lives, understanding adversarial examples becomes crucial. They remind us that AI systems, no matter how sophisticated, perceive the world differently than we do.
+
+The next time you see a cat that an AI thinks is a Guacamole, remember: you're witnessing the birth of a new art form, one that challenges our assumptions about intelligence, perception, and the relationship between humans and machines.
+
+---
+
+_Want to explore more? Check out the [Adversarial Examples Repository](https://github.com/cleverhans-lab/cleverhans) or try creating your own adversarial art with the code examples above._
+
+_Remember: With great power comes great responsibility. Use these techniques ethically and responsibly._
