@@ -5,7 +5,7 @@ import { describe } from "node:test";
 export const DATA = {
   name: "Kris Patel",
   initials: "KP",
-  url: "https://krispate.me",
+  url: "https://krispatel.me",
   location: "Ahmedabad, Gujarat, India",
   description:
     "I’m 20, based in Ahmedabad. I love tech, enjoy solving problems, and spend most of my time building things with code.",
